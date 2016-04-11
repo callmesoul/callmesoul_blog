@@ -29,7 +29,7 @@
 
                         <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.post.update', $id) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="hidden" name="_method" value="PUT">
+                            <input type="hidden" name="_method" value="put">
 
                             @include('admin.post._form')
 

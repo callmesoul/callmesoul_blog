@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Services\Markdowner;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -84,7 +85,6 @@ class Post extends Model
 
         $this->tags()->detach();
     }
-
     /**
      * Return the date portion of published_at
      */
