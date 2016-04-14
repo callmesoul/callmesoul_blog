@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::get('blog', 'BlogController@index');
 Route::get('blog/{slug}', 'BlogController@showPost');
+Route::get('blogall', 'BlogController@showAll');
 
 // Admin area
 get('admin', function () {

@@ -1,0 +1,91 @@
+.article-content{
+    height: 100%;
+    padding: 40px;
+}
+.article-content-container{
+    height: 100%;
+    background: rgba(112,100,93,0.6);
+    padding: 15px 30px;
+}
+.article-title .title{
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+.article-title .other{
+    font-size: 1.4rem;
+    color: #9e9d99;
+}
+.article-title .other i{
+    margin: 0 5px;
+}
+.article-message .img{
+    margin: 1rem 0;
+}
+.article-message .img img{
+    width: 100%;
+}
+.article-message .text{
+    font-size: 1.4rem;
+    color: #9e9d99;
+}
+.article-recommend{
+    background: rgba(59,54,51,0.6);
+    box-shadow: -3px 0 7px rgba(37,40,40,0.6);
+    padding: 8rem 6rem;
+}
+.article-recommendtitle .cn{
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+.article-recommendtitle .en{
+    font-size: 1.2rem;
+    color: #9e9d99;
+    margin-bottom: 0.5rem;
+}
+.article-recommendtitle .icon a{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #eb4f38;
+}
+.article-recommend-list ul li{
+    font-size: 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px dashed #9e9d99;
+}
+
+.article-recommend-list ul li .img,.article-recommend-list ul li .message{
+    display: inline-block;
+}
+.article-recommend-list ul li .img{
+    width: 100%;
+    vertical-align: middle;
+}
+.article-recommend-list ul li .img img{
+    max-width: 100%;
+}
+.article-recommend-list ul li .message{
+    width: 100%;
+    margin-left: 2%;
+    vertical-align: middle;
+}
+.article-recommend-list ul li .message .title{
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0.5rem;
+}
+.article-recommend-list ul li .message .time{
+    font-size: 1.2rem;
+    color: #9e9d99;
+}
+.article-recommend-list ul li a:hover{
+    cursor: pointer;
+}
+.article-recommend-list ul li a:hover .title{
+    color: #eb4f38;
+}
