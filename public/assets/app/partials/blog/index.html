@@ -1,0 +1,28 @@
+<div id="frame">
+    <div class="box">
+        <div class="box-top">
+            <span>首页</span>
+        </div>
+        <div class="box-content">
+            <ul>
+                <li ng-repeat="article in articles.data | filter:{'is_draft':0}">
+                    <a>
+                        <div class="image"><img ng-src="http://[[url]]/uploads/[[article.page_image || 'http://tu.ihuan.me/api/me_all_pic']]" ></div>
+                        <div class="content-warp">
+                            <div class="title">< [[article.title ]] ></div>
+                            <div class="content" >
+                                [[article.meta_description]]
+                            </div>
+                            <div class="other">
+                                <a><i class="iconfont icon-iconfontordinaryliulan"></i>52</a>
+                                <a><i class="iconfont icon-icon27"></i>52</a>
+                                <a><i class="iconfont icon-shijian"></i>[[article.updated_at]]</a>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

@@ -25,6 +25,11 @@
                     <div class="col-md-8">
                         <input type="text" class="form-control" name="page_image" id="page_image" onchange="handle_image_change()" alt="Image thumbnail" value="{{ $page_image }}">
                     </div>
+                    <div class="col-md-1 text-right">
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#modal-file-upload">
+                            <i class="fa fa-upload"></i> Upload
+                        </button>
+                    </div>
                     <script>
                         function handle_image_change() {
                             $("#page-image-preview").attr("src", function () {
@@ -43,8 +48,8 @@
                         }
                     </script>
                     <div class="visible-sm space-10"></div>
-                    <div class="col-md-4 text-right">
-                        <img src="{{ page_image($page_image) }}" class="img img_responsive" id="page-image-preview" style="max-height:40px">
+                    <div class="col-md-3 text-right">
+                        <img src="{{url('')}}{{ page_image($page_image) }}" class="img img_responsive" id="page-image-preview" style="max-height:40px">
                     </div>
                 </div>
             </div>
@@ -120,3 +125,5 @@
 
     </div>
 </div>
+
+

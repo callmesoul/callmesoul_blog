@@ -89,7 +89,7 @@
             </div>
         </div>
     </div>
-
+    @include('admin.post._modal')
 @stop
 
 @section('scripts')

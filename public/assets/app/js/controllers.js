@@ -4,18 +4,19 @@
 'use strict';
 
 angular.module('myApp.controllers',[])
-    .controller('Blog',['$scope','$http','Articles','$sce',function($scope,$http,Articles,$sce){
+    .controller('BlogMain',['$scope','$http','Articles','$sce','mePageLoading',function($scope,$http,Articles,$sce,mePageLoading){
+        mePageLoading.show();
+
+    }])
+    .controller('BlogIndex',['$scope','$http','Articles','$sce','mePageLoading',function($scope,$http,Articles,$sce,mePageLoading){
+        $scope.url=window.location.host;
         $scope.articles={};
-        $scope.loading = true;
         Articles.get()
             .success(function(data) {
                 $scope.articles = data;
                 for(var i=0;i<$scope.articles.data.length;i++){
                     $scope.articles.data[i].content_html=$sce.trustAsHtml($scope.articles.data[i].content_html);
                 }
-                $scope.loading = false;
+                mePageLoading.hide();
             });
-    }])
-    .controller('MyCtrl2',['$scope',function($scope){
-
     }])

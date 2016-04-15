@@ -67,12 +67,12 @@ a,a:hover,a:visited,a:active{
     font-size: 0.875rem;
 }
 .social{
-    border-top: 1px solid #332e2b;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     border-top: 1px solid rgba(17, 13, 10, 0.63);
+    border-bottom: 1px solid rgba(17, 13, 10, 0.63);
     height: 4rem;
 }
 .social .flex-1{
@@ -153,6 +153,7 @@ ul,li{
 .main-right{
     position: relative;
     overflow: hidden;
+    padding-bottom: 65px;
 }
 .foter{
     position: absolute;
@@ -360,4 +361,8 @@ ul,li{
         display: none;
     }
 
+}
+
+.pageload-overlay svg path {
+    fill: rgba(0,0,0,0.9);
 }

@@ -5,6 +5,7 @@
 
 angular.module('myApp',[
     'ui.router',
+    'me-pageloading',
     'myApp.filters',
     'myApp.services',
     'myApp.directives',
@@ -12,19 +13,15 @@ angular.module('myApp',[
 ],function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
-}).config(function ($stateProvider, $urlRouterProvider) {
+}).config(['$stateProvider', '$urlRouterProvider','$locationProvider','mePageLoadingProvider',function ($stateProvider, $urlRouterProvider,$locationProvider,mePageLoadingProvider) {
 
-    $urlRouterProvider.when("", "/");
+    $urlRouterProvider.when("", "/index");
 
     $stateProvider
-        .state("blog", {
-            url: "/",
-            templateUrl: "assets/app/partials/blogMain.html",
-            controller:"Blog"
-        })
-        .state("view2", {
-            url:"/view2",
-            templateUrl: "assets/app/partials/html2.html"
+        .state("index", {
+            url:"/index",
+            templateUrl: "assets/app/partials/blog/index.html",
+            controller:"BlogIndex"
         })
 
-});
+}]);
