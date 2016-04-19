@@ -75,7 +75,7 @@
             </div>
             <!--主页上右部分-->
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 height-100 main-right" >
-                <div ui-view></div>
+                <div ui-view class="height-100" style="overflow: hidden;"></div>
 
                 <div class="foter">
                     <a>&copyCallMeSoul</a> <a>Design：Oriharaki</a> <a>备案号：粤45466</a>
@@ -93,6 +93,10 @@
 <script src="assets/js/jquery-1.10.1.min.js"></script>
 <script src="assets/angular/angular.js"></script>
 <script src="assets/angular/angular-ui-router.min.js"></script>
+<script src="assets/angular/jquery.nicescroll.min.js"></script>
+<script src="assets/angular/angular-nicescroll.js"></script>
+<script src="assets/angular/masonry.js"></script>
+<script src="assets/angular/angular-masonry.js"></script>
 <script src="assets/angular/me-pageloading.min.js"></script>
 <script src="assets/angular/snap.svg-min.js"></script>
 <script src="assets/app/js/app.js"></script>
@@ -117,6 +121,7 @@
             }
         });
         ap1.init();
+        $(".box-content ul").niceScroll({cursorcolor:"#00F"});
     })
 </script>
 </html>

@@ -10,11 +10,10 @@
 // In this case it is a simple value service.
 angular.module('myApp.services', [])
     .factory('Articles', function($http) {
-
         return {
             // get all the comments
-            get: function () {
-                return $http.get('/blogall');
+            get: function (page) {
+                return $http.get('/blogall?page='+page);
             },
 
             // save a comment (pass in comment data)

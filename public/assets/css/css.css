@@ -168,7 +168,9 @@ ul,li{
     margin: 0 0.3rem;
 }
 .box{
-    margin: 3.5rem 4rem 3.5rem 3rem;
+    margin: 2% 3% 0 3%;
+    overflow: hidden;
+    height: 96%;
 }
 .box-top{
     color: #b3b3b3;
@@ -176,6 +178,7 @@ ul,li{
     border-bottom: 1px dashed #626262;
     padding-bottom: 0.5rem;
     padding-left: 3rem;
+    height: 3%;
 }
 .box-top span{
     position: relative;
@@ -194,10 +197,15 @@ ul,li{
     margin-bottom: -0.725rem;
 }
 .box-content{
-    margin-top: 1.8rem;
+    margin-top: 2%;
+    height: 95%;
+    position: relative;
 }
 .box-content ul {
     font-size: 0;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
 }
 .box-content  ul li{
     display: inline-block;
@@ -365,4 +373,19 @@ ul,li{
 
 .pageload-overlay svg path {
     fill: rgba(0,0,0,0.9);
+}
+#frame{
+    height: 100%;overflow: hidden;
+}
+.notmore{
+    line-height: 39px;
+    background: rgba(0,0,0,0.6);
+    color: #FFFFFF;
+    text-align: center;
+    height: 39px;
+    z-index: 9999999;
+    font-size: 15px;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 100%;
 }

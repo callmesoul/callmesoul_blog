@@ -1,17 +1,35 @@
+<style>
+    .flowGrid:before,.flowGrid:after{
+        content: "";
+        display: table;
+    }
+    .flowGrid:after{
+        clear:both;
+    }
+    .flowGridItem{ margin-bottom:10px;}
+    .flowGridItem img{width:100%;}
+    .flowGridColumn{
+        float: left;
+        padding-left: 10px;
+    }
+    .flowGridColumn:last-of-type{
+        padding-right: 10px;
+    }
+</style>
 <div id="frame">
     <div class="box">
         <div class="box-top">
             <span>首页</span>
         </div>
-        <div class="box-content">
-            <ul>
+        <div class="box-content" >
+            <ul ng-nicescroll nice-option="{cursorcolor: '#ea5038',cursoropacitymin:1,background:'#211e1c',cursorborderradius:'0px',cursorborder:'0px solid #ea5038',cursorwidth:'3px',railpadding:{top: 0,right:0,left:-20,bottom:0}}" nice-scroll-end="endScroll()">
                 <li ng-repeat="article in articles.data | filter:{'is_draft':0}">
-                    <a>
+                    <a class="a-card">
                         <div class="image"><img ng-src="http://[[url]]/uploads/[[article.page_image || 'http://tu.ihuan.me/api/me_all_pic']]" ></div>
                         <div class="content-warp">
                             <div class="title">< [[article.title ]] ></div>
                             <div class="content" >
-                                [[article.meta_description]]
+                                [[article.content_raw]]
                             </div>
                             <div class="other">
                                 <a><i class="iconfont icon-iconfontordinaryliulan"></i>52</a>
@@ -21,7 +39,8 @@
                         </div>
                     </a>
                 </li>
-
+                <img ng-if="pageLoading" src="assets/svg/loading-bubbles.svg" width="100%" height="64">
+                <div ng-if="notmore" class="notmore">没有更多了...(┬＿┬)........</div>
             </ul>
         </div>
     </div>

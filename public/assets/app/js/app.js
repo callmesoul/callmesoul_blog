@@ -10,13 +10,12 @@ angular.module('myApp',[
     'myApp.services',
     'myApp.directives',
     'myApp.controllers',
+    'angular-nicescroll',
 ],function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
 }).config(['$stateProvider', '$urlRouterProvider','$locationProvider','mePageLoadingProvider',function ($stateProvider, $urlRouterProvider,$locationProvider,mePageLoadingProvider) {
-
     $urlRouterProvider.when("", "/index");
-
     $stateProvider
         .state("index", {
             url:"/index",
